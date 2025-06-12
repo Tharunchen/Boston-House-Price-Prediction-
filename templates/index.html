@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boston Housing Price Prediction</title>
+    <style>
+     body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://th.bing.com/th/id/R.e9cf369fe7c5009bd6a838cac903559a?rik=ZqNm56DkokIhxg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fFree-desktop-best-wallpapers-hd.jpg&ehk=YJLZds2pdy1kyiutiR%2fLb65%2bv7Mns3bIzOR0LqH%2bsU8%3d&risl=&pid=ImgRaw&r=0");
+    background-size: cover;           /* Make it cover the whole screen */
+    background-repeat: no-repeat;     /* Prevent tiling */
+    background-position: center;      /* Center the image */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3498db;
+}
+
+h3 {
+    text-align: center;
+    color: #27ae60;
+    margin-top: 30px;
+}
+
+    </style>
+</head>
+
+<body>
+    <h2>Boston Housing Price Prediction</h2>
+    <form action="/predict" method="post">
+
+        <label>CRIM:</label><br>
+        <input type="text" name="CRIM"><br>
+
+        <label>ZN:</label><br>
+        <input type="text" name="ZN"><br>
+
+        <label>INDUS:</label><br>
+        <input type="text" name="INDUS"><br>
+
+        <label>CHAS:</label><br>
+        <input type="text" name="CHAS"><br>
+
+        <label>NOX:</label><br>
+        <input type="text" name="NOX"><br>
+
+        <label>RM:</label><br>
+        <input type="text" name="RM"><br>
+
+        <label>AGE:</label><br>
+        <input type="text" name="AGE"><br>
+
+        <label>DIS:</label><br>
+        <input type="text" name="DIS"><br>
+
+        <label>RAD:</label><br>
+        <input type="text" name="RAD"><br>
+
+        <label>TAX:</label><br>
+        <input type="text" name="TAX"><br>
+
+        <label>PTRATIO:</label><br>
+        <input type="text" name="PTRATIO"><br>
+
+        <label>B:</label><br>
+        <input type="text" name="B"><br>
+
+        <label>LSTAT:</label><br>
+        <input type="text" name="LSTAT"><br>
+
+        <br>
+        <input type="submit" value="Predict">
+
+    </form>
+
+  
+        <h3>{{ prediction_text }}</h3>
+  
+
+</body>
+</html>
