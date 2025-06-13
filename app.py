@@ -35,7 +35,7 @@ def predict():
     prediction = model.predict(features_array)
     output = round(prediction[0],2)
     
-    return render_template('index.html', prediction_text=f"Predicted Price: {output}")
+    return render_template('index.html', prediction_text=f"Predicted Price:$ {output}")
 
 
 if __name__ == "__main__":
